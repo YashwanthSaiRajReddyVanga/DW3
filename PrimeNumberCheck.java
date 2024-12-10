@@ -1,23 +1,13 @@
-public class PrimeNumberCheck {
+class prime{
     public static void main(String[] args) {
-        int num = 29; 
-
-        if (isPrime(num)) {
-            System.out.println(num + " is a prime number.");
-        } else {
-            System.out.println(num + " is not a prime number.");
-        }
-    }
-
-    public static boolean isPrime(int num) {
-        if (num <= 1) {
-            return false; 
-        }
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false; 
+        for(int i=2;i<=100;i++){
+            boolean isPrime=true;
+            for(int j=2;j<i;j++){
+                if(i%j==0)
+                 isPrime=false;
             }
+            if(isPrime)
+            System.out.print(i+" ");
         }
-        return true; 
     }
 }
